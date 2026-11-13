@@ -61,7 +61,7 @@ useHead({
 const certifications = ref([
   {
     label: 'Word Associate Certification',
-    image: '/images/Word Certidication-1.png',
+    image: '/images/WordCertification-1.png',
     verifyUrl: 'https://www.certiport.com/portal/pages/credentialverification.aspx'
   },
   {
@@ -102,7 +102,7 @@ useSeoMeta({
   ogDescription: description,
   ogType: 'website',
   ogUrl: url.href,
-  ogImage: `${url.origin}/images/Word Certification-1.png`, 
+  ogImage: `${url.origin}/images/WordCertification-1.png`, 
   ogImageAlt: 'Word Associate Certification image',
 })
 

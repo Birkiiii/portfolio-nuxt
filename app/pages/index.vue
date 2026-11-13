@@ -1,7 +1,7 @@
 <template>
   <main class="wrapper">
     <div class="left-container">
-      <img src="/images/id kirby 2.png" alt="Profile picture" id="dp" />
+      <img src="/images/idkirby2.png" alt="Profile picture" id="dp" />
 
       <h1 id="name">{{ firstName }}</h1>
       <h1 id="Lname">{{ lastName }}</h1>
@@ -52,7 +52,7 @@ useSeoMeta({
   ogDescription: description,
   ogType: 'website',
   ogUrl: url.href,
-  ogImage: `${url.origin}/images/id kirby 2.png`, 
+  ogImage: `${url.origin}/images/idkirby2.png`, 
   ogImageAlt: 'Kirby Villegas portrait image',
 })
 
