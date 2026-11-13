@@ -102,7 +102,7 @@ useSeoMeta({
   ogDescription: description,
   ogType: 'website',
   ogUrl: url.href,
-  ogImage: `${url.origin}/images/Word Certidication-1.png`, 
+  ogImage: `${url.origin}/images/Word Certification-1.png`, 
   ogImageAlt: 'Word Associate Certification image',
 })
 
