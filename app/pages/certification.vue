@@ -85,6 +85,27 @@ const openModal = (imageSrc) => {
 const closeModal = () => {
   selectedImage.value = null
 }
+
+const url = useRequestURL()
+
+const title = 'Certifications | Kirby Villegas'
+const description = 'Explore the certifications of Kirby Villegas, an aspiring web developer. Verify your credentials and learn more about his professional achievements.'
+
+useHead({
+  title,
+  link: [{ rel: 'canonical', href: url.href }],
+})
+
+useSeoMeta({
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogType: 'website',
+  ogUrl: url.href,
+  ogImage: `${url.origin}/images/Word Certidication-1.png`, 
+  ogImageAlt: 'Word Associate Certification image',
+})
+
 </script>
 
 <style scoped>

@@ -32,9 +32,28 @@
 </template>
 
 <script setup>
+
+
+const url = useRequestURL()
+
+const title = 'About | Kirby Villegas'
+const description = 'Learn more about Kirby Villegas, an aspiring web developer and data analyst. Discover his background, skills, and career aspirations in the tech industry.'
 useHead({
-  title: 'About | Kirby Villegas'
+  title,
+  link: [{ rel: 'canonical', href: url.href }],
 })
+
+useSeoMeta({
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogType: 'website',
+  ogUrl: url.href,
+  ogImage: `${url.origin}/images/kirby2.png`, 
+  ogImageAlt: 'Kirby Villegas portrait image',
+})
+
+
 </script>
 
 <style scoped>

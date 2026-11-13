@@ -133,6 +133,25 @@ const toolsStack = ref([
     description: 'A lightweight and powerful code editor used for programming and web development.'
   }
 ])
+
+const url = useRequestURL()
+
+const title = 'Tech Stack | Kirby Villegas'
+const description = 'Explore the technologies and tools that Kirby Villegas uses to build web applications and solve real-world problems.'
+
+useHead({
+  title,
+  link: [{ rel: 'canonical', href: url.href }],
+})
+
+useSeoMeta({
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogType: 'website',
+  ogUrl: url.href,
+})
+
 </script>
 
 <style scoped>
