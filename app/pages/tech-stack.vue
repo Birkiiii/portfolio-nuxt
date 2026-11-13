@@ -1,48 +1,23 @@
 <template>
   <div class="ts-div">
-    <!-- Header -->
     <div class="techstack">
       <h1 class="Tech">TECH</h1>
       <h1 class="Stack">STACK</h1>
     </div>
 
-    <!-- Frontend Section -->
     <h1 id="fe">FRONTEND</h1>
     <div class="tech-stack-container">
-      <div v-for="item in frontendStack" :key="item.name" class="tech-card">
-        <h3>{{ item.name }}</h3>
-        <img :id="item.id" :src="item.image" :alt="item.name" />
-        <div class="tech-info">
-          <h2>{{ item.title }}</h2>
-          <p class="deft">{{ item.description }}</p>
-        </div>
-      </div>
+      <TechCard v-for="item in frontendStack" :key="item.name" :item="item" />
     </div>
 
-    <!-- Backend Section -->
     <h1 id="be">BACKEND</h1>
     <div class="tech-stack-container">
-      <div v-for="item in backendStack" :key="item.name" class="tech-card">
-        <h3>{{ item.name }}</h3>
-        <img :id="item.id" :src="item.image" :alt="item.name" />
-        <div class="tech-info">
-          <h2>{{ item.title }}</h2>
-          <p class="deft">{{ item.description }}</p>
-        </div>
-      </div>
+      <TechCard v-for="item in backendStack" :key="item.name" :item="item" />
     </div>
 
-    <!-- Tools Section -->
     <h1 id="tl">TOOLS</h1>
     <div class="tech-stack-container">
-      <div v-for="item in toolsStack" :key="item.name" class="tech-card">
-        <h3>{{ item.name }}</h3>
-        <img :id="item.id" :src="item.image" :alt="item.name" />
-        <div class="tech-info">
-          <h2>{{ item.title }}</h2>
-          <p class="deft">{{ item.description }}</p>
-        </div>
-      </div>
+      <TechCard v-for="item in toolsStack" :key="item.name" :item="item" />
     </div>
   </div>
 </template>
