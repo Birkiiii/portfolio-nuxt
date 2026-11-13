@@ -1,5 +1,5 @@
 <template>
-  <div class="ts-div">
+  <div class="ts-div" @click="handleTechStackClick">
     <div class="techstack">
       <h1 class="Tech">TECH</h1>
       <h1 class="Stack">STACK</h1>
@@ -7,23 +7,53 @@
 
     <h1 id="fe">FRONTEND</h1>
     <div class="tech-stack-container">
-      <TechCard v-for="item in frontendStack" :key="item.name" :item="item" />
+      <TechCard
+        v-for="item in frontendStack"
+        :key="item.name"
+        :item="item"
+        :expanded="expandedTech === item.name"
+        @toggle="toggleTech(item.name)"
+      />
     </div>
 
     <h1 id="be">BACKEND</h1>
     <div class="tech-stack-container">
-      <TechCard v-for="item in backendStack" :key="item.name" :item="item" />
+      <TechCard
+        v-for="item in backendStack"
+        :key="item.name"
+        :item="item"
+        :expanded="expandedTech === item.name"
+        @toggle="toggleTech(item.name)"
+      />
     </div>
 
     <h1 id="tl">TOOLS</h1>
     <div class="tech-stack-container">
-      <TechCard v-for="item in toolsStack" :key="item.name" :item="item" />
+      <TechCard
+        v-for="item in toolsStack"
+        :key="item.name"
+        :item="item"
+        :expanded="expandedTech === item.name"
+        @toggle="toggleTech(item.name)"
+      />
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+
+const expandedTech = ref(null)
+
+const toggleTech = (name) => {
+  expandedTech.value = expandedTech.value === name ? null : name
+}
+
+const handleTechStackClick = (event) => {
+  if (!event.target.closest('.tech-stack-card')) {
+    expandedTech.value = null
+  }
+}
 
 useHead({
   title: 'Tech Stack | Kirby Villegas'
